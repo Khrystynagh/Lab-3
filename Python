@@ -1,0 +1,18 @@
+import math
+x=float(input("Введіть x:"))
+
+s=0
+k=1
+
+if -2<x<2 :
+    aK=((x**(2*k)) * math.sin(x**k))/(k**2)
+    while abs(aK) >= 10**(-4) and k<10 :
+        s=s+aK
+        print("Поточне s:", s)
+        k=k+1
+        aK=((x**(2*k)) * math.sin(x**k))/(k**2)
+else :
+    print("помилка")
+
+print(s)
+
